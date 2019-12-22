@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html><head>
+		<meta charset="utf-8">
+		<title>js</title>
+		<style>
+			#wrap{
+				position: absolute;
+				left: 50%;
+				top: 0;
+				width: 400px;
+				margin-left: -200px;
+			}
+			#wrap1,#wrap2{
+				position: relative;
+				margin: 20px;
+				padding: 20px;
+				width: 150px;
+				height: 50px;
+				background-color: aquamarine;
+				border: 2px solid #7FFFD4;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="wrap1">鼠标离开了wrap2</div>
+			<div id="wrap2">鼠标离开了wrap1</div>
+		</div>
+		<script>
+			let oWrap1=document.getElementById("wrap1"),
+				oWrap2=document.getElementById("wrap2");
+				oWrap1.onmouseenter=function(){
+					oWrap2.innerHTML="鼠标移入了wrap1";
+				}
+				oWrap1.onmouseleave=function(){
+					oWrap2.innerHTML="鼠标离开了wrap1";
+				}
+				oWrap2.onmouseenter=function(){
+					oWrap1.innerHTML="鼠标移入了wrap2";
+				}
+				oWrap2.onmouseleave=function(){
+					oWrap1.innerHTML="鼠标离开了wrap2";
+				}
+		</script>
+	
+
+</body></html>
